@@ -33,9 +33,6 @@ namespace DynamicMaps.Config
         public static ConfigEntry<bool> ShowPlayerMarker;
 
         public static ConfigEntry<bool> ShowFriendlyPlayerMarkersInRaid;
-        public static ConfigEntry<bool> ShowEnemyPlayerMarkersInRaid;
-        public static ConfigEntry<bool> ShowScavMarkersInRaid;
-        public static ConfigEntry<bool> ShowBossMarkersInRaid;
 
         public static ConfigEntry<bool> ShowLockedDoorStatus;
 
@@ -204,33 +201,6 @@ namespace DynamicMaps.Config
                 true,
                 new ConfigDescription(
                     "If friendly player markers should be shown in-raid",
-                    null,
-                    new ConfigurationManagerAttributes { })));
-
-            ConfigEntries.Add(ShowEnemyPlayerMarkersInRaid = Config.Bind(
-                DynamicMarkerTitle,
-                "Show Enemy Player Markers",
-                false,
-                new ConfigDescription(
-                    "If enemy player markers should be shown in-raid (generally for debug)",
-                    null,
-                    new ConfigurationManagerAttributes { })));
-
-            ConfigEntries.Add(ShowScavMarkersInRaid = Config.Bind(
-                DynamicMarkerTitle,
-                "Show Scav Markers",
-                false,
-                new ConfigDescription(
-                    "If enemy scav markers should be shown in-raid (generally for debug)",
-                    null,
-                    new ConfigurationManagerAttributes { })));
-
-            ConfigEntries.Add(ShowBossMarkersInRaid = Config.Bind(
-                DynamicMarkerTitle,
-                "Show Boss Markers",
-                false,
-                new ConfigDescription(
-                    "If enemy boss markers should be shown in-raid",
                     null,
                     new ConfigurationManagerAttributes { })));
 

@@ -587,19 +587,13 @@ namespace DynamicMaps.UI
             }
 
             // other player markers
-            var needOtherPlayerMarkers = Settings.ShowFriendlyPlayerMarkersInRaid.Value
-                                      || Settings.ShowEnemyPlayerMarkersInRaid.Value
-                                      || Settings.ShowBossMarkersInRaid.Value
-                                      || Settings.ShowScavMarkersInRaid.Value;
+            var needOtherPlayerMarkers = Settings.ShowFriendlyPlayerMarkersInRaid.Value;
 
             AddRemoveMarkerProvider<OtherPlayersMarkerProvider>(needOtherPlayerMarkers);
             if (needOtherPlayerMarkers)
             {
                 var provider = GetMarkerProvider<OtherPlayersMarkerProvider>();
                 provider.ShowFriendlyPlayers = Settings.ShowFriendlyPlayerMarkersInRaid.Value;
-                provider.ShowEnemyPlayers = Settings.ShowEnemyPlayerMarkersInRaid.Value;
-                provider.ShowScavs = Settings.ShowScavMarkersInRaid.Value;
-                provider.ShowBosses = Settings.ShowBossMarkersInRaid.Value;
             }
 
             // corpse markers
